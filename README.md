@@ -1,16 +1,17 @@
-### Hi there 👋
+---
+home: true
+---
 
-<!--
-**Qinmei/qinmei** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div class='bg'>
+  <img class='bg-cover' :src="$withBase('/video.jpg')">
+</div>
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div class="content">
+  <h1 class='titleText'>Qin Video</h1>
+  <p class='info'>基于nodejs的动漫CMS系统</p>
+  <div class="list">
+    <router-link to="/docs/" class="action-button">使用文档</router-link>
+     <a class='link-button' href='http://demo.qinvideo.org'>前端演示</a>
+     <a class='link-button' href='http://demo.qinvideo.org/backend'>后端演示</a>
+  </div>
+</div>
