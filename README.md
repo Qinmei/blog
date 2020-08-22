@@ -2,16 +2,11 @@
 home: true
 ---
 
-<div class='bg'>
-  <img class='bg-cover' :src="$withBase('/video.jpg')">
-</div>
+<div class='bg'></div>
 
 <div class="content">
-  <h1 class='titleText'>Qin Video</h1>
-  <p class='info'>基于nodejs的动漫CMS系统</p>
+  <p class='info'>一个写博客闲聊的地方</p>
   <div class="list">
-    <router-link to="/docs/" class="action-button">使用文档</router-link>
-     <a class='link-button' href='http://demo.qinvideo.org'>前端演示</a>
-     <a class='link-button' href='http://demo.qinvideo.org/backend'>后端演示</a>
+    <router-link to="/blog/" class="action-button">进入查看</router-link>
   </div>
 </div>

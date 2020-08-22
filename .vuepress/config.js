@@ -1,20 +1,10 @@
 module.exports = {
-  plugins: [
-    "@vuepress/back-to-top",
-    "@vuepress/pwa",
-    [
-      "@vuepress/google-analytics",
-      {
-        ga: "UA-88256229-2", // UA-00000000-0
-      },
-    ],
-  ],
+  plugins: ["@vuepress/back-to-top", "@vuepress/pwa"],
   title: "Qinmei",
   dest: "dist",
-  description: "一款基于nodejs的动漫CMS系统",
+  description: "一个写博客的地方",
   head: [["link", { rel: "icon", href: `/logo.svg` }]],
   themeConfig: {
-    logo: "/logo.svg",
     repo: "Qinmei",
     editLinks: false,
     sidebarDepth: 2,
@@ -22,39 +12,30 @@ module.exports = {
     lastUpdated: "上次更新",
     nav: [
       {
-        text: "文档",
-        link: "/docs/",
+        text: "博客",
+        link: "/blog/",
       },
       {
-        text: "视频教程",
+        text: "视频",
         link: "/video/",
       },
       {
-        text: "演示",
+        text: "项目",
         items: [
           {
-            text: "前端演示",
-            link: "http://demo.qinvideo.org",
+            text: "qinVideo",
+            link: "https://qinvideo.org",
           },
-          {
-            text: "后台演示",
-            link: "http://demo.qinvideo.org/backend",
-          },
-        ],
-      },
-      {
-        text: "其他项目",
-        items: [
           {
             text: "qinPlayer",
-            link: "http://qinvideo.org/player.html",
+            link: "https://qinvideo.org/player.html",
           },
         ],
       },
     ],
     sidebar: {
-      "/docs/": ["", "install", "section", "performance"],
-      "/video/": ["", "source"],
+      "/blog/": ["", "react", "algorithms"],
+      "/video/": [""],
     },
   },
 };
