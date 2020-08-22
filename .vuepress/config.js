@@ -34,8 +34,32 @@ module.exports = {
       },
     ],
     sidebar: {
-      "/blog/": ["", "react", "algorithms"],
+      "/blog/": [
+        {
+          title: "前端基础",
+          collapsable: true,
+          children: ["/blog/frontend/prototype"],
+        },
+        {
+          title: "React源码",
+          collapsable: true,
+          children: ["/blog/react/introduce"],
+        },
+        {
+          title: "数据结构与算法",
+          collapsable: true,
+          children: ["/blog/algorithms/structure"],
+        },
+        {
+          title: "开源项目",
+          collapsable: true,
+          children: ["/blog/github/qinvideo"],
+        },
+      ],
       "/video/": [""],
     },
+  },
+  define: {
+    assetsUrl: "https://assets.qinmei.org",
   },
 };
