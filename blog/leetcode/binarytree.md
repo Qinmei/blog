@@ -1,0 +1,151 @@
+# 二叉树的遍历
+
+## 深度优先(dfs)
+
+### 前序(递归)
+
+```js
+const dfs = (node) => {
+  if (!node) return;
+  handler(root);
+  dfs(node.left);
+  dfs(node.right);
+};
+```
+
+### 中序(递归)
+
+```js
+const dfs = (node) => {
+  if (!node) return;
+  dfs(node.left);
+  handler(root);
+  dfs(node.right);
+};
+```
+
+### 后序(递归)
+
+```js
+const dfs = (node) => {
+  if (!node) return;
+  dfs(node.left);
+  dfs(node.right);
+  handler(root);
+};
+```
+
+### 前序(迭代)
+
+```js
+const preorderTraversal = function(root) {
+  if (!root) return [];
+  let queue = [root];
+  let res = [];
+
+  while (queue.length) {
+    let node = queue.shift();
+    if (typeof node === "object") {
+      if (node.right) queue.unshift(node.right);
+      if (node.left) queue.unshift(node.left);
+      queue.unshift(node.val);
+    } else {
+      res.push(node);
+    }
+  }
+  return res;
+};
+```
+
+### 中序(迭代)
+
+```js
+const inorderTraversal = function(root) {
+  if (!root) return [];
+  let queue = [root];
+  let res = [];
+
+  while (queue.length) {
+    let node = queue.shift();
+    if (typeof node === "object") {
+      if (node.right) queue.unshift(node.right);
+      queue.unshift(node.val);
+      if (node.left) queue.unshift(node.left);
+    } else {
+      res.push(node);
+    }
+  }
+  return res;
+};
+```
+
+### 后序(迭代)
+
+```js
+const postorderTraversal = function(root) {
+  if (!root) return [];
+  let queue = [root];
+  let res = [];
+
+  while (queue.length) {
+    let node = queue.shift();
+    if (typeof node === "object") {
+      queue.unshift(node.val);
+      if (node.right) queue.unshift(node.right);
+      if (node.left) queue.unshift(node.left);
+    } else {
+      res.push(node);
+    }
+  }
+  return res;
+};
+```
+
+## 层序遍历（bfs）
+
+```js
+const bfs = (root) => {
+  let queue = [root];
+  while (queue.length) {
+    let node = queue.shift();
+    if (!node) continue;
+    handler(node);
+    queue.push(node.left, node.right);
+  }
+};
+```
+
+## 还原二叉树
+
+### 前序 + 中序
+
+```js
+var buildTree = function(preorder, inorder) {
+  if (!preorder.length) return null;
+  let value = preorder[0];
+  let node = new TreeNode(value);
+  let index = inorder.indexOf(preorder[0]);
+
+  node.left = buildTree(preorder.slice(1, index + 1), inorder.slice(0, index));
+  node.right = buildTree(preorder.slice(index + 1), inorder.slice(index + 1));
+  return node;
+};
+```
+
+### 后序 + 中序
+
+```js
+var buildTree = function(inorder, postorder) {
+  if (!postorder.length) return null;
+  let value = postorder[postorder.length - 1];
+  let node = new TreeNode(value);
+  let sort = inorder.indexOf(value);
+
+  node.left = buildTree(inorder.slice(0, sort), postorder.slice(0, sort));
+  node.right = buildTree(
+    inorder.slice(sort + 1),
+    postorder.slice(sort, postorder.length - 1)
+  );
+  return node;
+};
+```

@@ -1,5 +1,15 @@
 module.exports = {
-  plugins: ["@vuepress/back-to-top", "@vuepress/pwa"],
+  plugins: [
+    "@vuepress/back-to-top",
+    "@vuepress/pwa",
+    "vuepress-plugin-mermaidjs",
+    [
+      require("./plugins/right-anchor"),
+      {
+        showLevel: 2,
+      },
+    ],
+  ],
   title: "Qinmei",
   dest: "dist",
   description: "一个写博客的地方",
@@ -7,9 +17,10 @@ module.exports = {
   themeConfig: {
     repo: "Qinmei",
     editLinks: false,
-    sidebarDepth: 2,
-    editLinkText: "在 GitHub 上编辑此页",
-    lastUpdated: "上次更新",
+    sidebarDepth: 0,
+    nextLinks: "",
+    prevLinks: "",
+    smoothScroll: true,
     nav: [
       {
         text: "博客",
@@ -36,30 +47,32 @@ module.exports = {
     sidebar: {
       "/blog/": [
         {
-          title: "前端基础",
+          title: "Js基础",
           collapsable: true,
-          children: ["/blog/frontend/prototype"],
+          children: ["/blog/js/prototype"],
         },
         {
-          title: "React源码",
+          title: "React进阶",
           collapsable: true,
           children: ["/blog/react/introduce"],
         },
         {
-          title: "数据结构与算法",
+          title: "React源码",
           collapsable: true,
-          children: ["/blog/algorithms/structure"],
+          children: ["/blog/code/01", "/blog/code/02"],
+        },
+        {
+          title: "leetcode",
+          collapsable: true,
+          children: ["/blog/leetcode/binarytree"],
         },
         {
           title: "开源项目",
           collapsable: true,
-          children: ["/blog/github/qinvideo"],
+          children: ["/blog/github/qinvideo", "/blog/github/qinplayer"],
         },
       ],
       "/video/": [""],
     },
-  },
-  define: {
-    assetsUrl: "https://assets.qinmei.org",
   },
 };
