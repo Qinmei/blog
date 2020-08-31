@@ -1,7 +1,6 @@
 module.exports = {
   plugins: [
     "@vuepress/back-to-top",
-    "@vuepress/pwa",
     "vuepress-plugin-mermaidjs",
     [
       require("./plugins/right-anchor"),
