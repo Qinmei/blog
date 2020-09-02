@@ -48,12 +48,12 @@ module.exports = {
         {
           title: "Js基础",
           collapsable: true,
-          children: ["/blog/js/prototype"],
+          children: ["/blog/javascript/01"],
         },
         {
           title: "React进阶",
           collapsable: true,
-          children: ["/blog/react/introduce"],
+          children: ["/blog/react/01"],
         },
         {
           title: "React源码",
