@@ -48,7 +48,11 @@ module.exports = {
         {
           title: "Js基础",
           collapsable: true,
-          children: ["/blog/javascript/01"],
+          children: [
+            "/blog/javascript/01",
+            "/blog/javascript/02",
+            "/blog/javascript/03",
+          ],
         },
         {
           title: "React进阶",
@@ -63,7 +67,7 @@ module.exports = {
         {
           title: "leetcode",
           collapsable: true,
-          children: ["/blog/leetcode/binarytree"],
+          children: ["/blog/leetcode/01"],
         },
         {
           title: "开源项目",
