@@ -57,7 +57,7 @@ module.exports = {
         {
           title: "React进阶",
           collapsable: true,
-          children: ["/blog/react/01"],
+          children: ["/blog/react/01", "/blog/react/02"],
         },
         {
           title: "React源码",
