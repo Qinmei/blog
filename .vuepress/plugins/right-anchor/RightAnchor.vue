@@ -98,7 +98,7 @@ export default {
   right: 0;
   width: 220px;
   border-left: 2px solid #eaecef;
-  z-index: 100;
+  z-index: 9;
   background-color: $rightAnchorBgColor;
 
   &-item {
