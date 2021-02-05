@@ -2,7 +2,7 @@ import { defineConfig } from 'dumi';
 import config from './config';
 
 export default defineConfig({
-  title: 'Qinvideo',
+  title: 'Qinmei',
   favicon: config.favicon,
   logo: config.logo,
   outputPath: 'dist',
