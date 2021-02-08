@@ -1,6 +1,6 @@
 ---
 gapless: true
-title: QinVideo
+title: Qinmei
 ---
 
 <code src="./components/home/index.tsx" inline />
