@@ -29,7 +29,13 @@ export default defineConfig({
       },
       {
         title: 'React进阶',
-        children: ['blog/react/01', 'blog/react/02', 'blog/react/03', 'blog/react/04'],
+        children: [
+          'blog/react/01',
+          'blog/react/02',
+          'blog/react/03',
+          'blog/react/04',
+          'blog/react/05',
+        ],
       },
       {
         title: 'React源码',
