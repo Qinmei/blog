@@ -13,6 +13,10 @@ export default defineConfig({
       path: '/blog',
     },
     {
+      title: 'React源码',
+      path: '/react',
+    },
+    {
       title: 'QinVideo',
       path: config.qinVideo,
     },
@@ -37,17 +41,19 @@ export default defineConfig({
           'blog/react/05',
         ],
       },
+    ],
+    '/react': [
       {
-        title: 'React源码',
-        children: ['blog/code/01', 'blog/code/02'],
+        title: '总览',
+        children: ['react/code/01', 'react/code/02'],
       },
       {
-        title: 'leetcode',
-        children: ['blog/leetcode/01'],
+        title: '架构设计',
+        children: ['react/status/todo'],
       },
       {
-        title: '开源项目',
-        children: ['blog/github/qinvideo', 'blog/github/qinplayer'],
+        title: '理论实战',
+        children: ['react/status/todo'],
       },
     ],
   },
