@@ -28,24 +28,20 @@ export default defineConfig({
   menus: {
     '/blog': [
       {
-        title: 'Js基础',
-        children: ['blog/javascript/01', 'blog/javascript/02', 'blog/javascript/03'],
-      },
-      {
         title: 'React进阶',
         children: [
-          'blog/react/01',
-          'blog/react/02',
-          'blog/react/03',
-          'blog/react/04',
-          'blog/react/05',
+          'blog/react/cra-init',
+          'blog/react/component-extend',
+          'blog/react/error-throw',
+          'blog/react/class-and-hook',
+          'blog/react/mvc',
         ],
       },
     ],
     '/react': [
       {
         title: '总览',
-        children: ['react/code/01', 'react/code/02'],
+        children: ['react/code/overview', 'react/code/process'],
       },
       {
         title: '架构设计',

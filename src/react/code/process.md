@@ -5,10 +5,11 @@
 ### 简化版
 
 针对 setState 的流程做了一个简单的总结
-<code  src='../../components/pictures/react02.tsx'  inline/>
+
+<img src="https://assets.qinmei.org/web/images/react/setState.jpeg">
 
 ### 详细版
 
 比较详细的总结版本, 展示了比较重要的函数, 同时也标注了一些生命周期的执行时间
 
-<code  src='../../components/pictures/react03.tsx'  inline/>
+<img src="https://assets.qinmei.org/web/images/react/process.jpg">

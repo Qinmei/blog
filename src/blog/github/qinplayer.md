@@ -24,4 +24,4 @@
 
 ### 图片预览
 
-<code  src='../../components/pictures/qinplayer.tsx'  inline/>
+暂无

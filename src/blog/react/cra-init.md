@@ -43,11 +43,11 @@ yarn create react-app my-app --template typescript
 
 但是 eslint 更多的是规则校验，虽然也能用做格式化，不过用专一的工具来做更合适，那就是`prettier`;
 
-不过prettier可能会跟eslint的规则相互冲突，而且prettier也没有语法提示，虽然在保存的时候可以自动格式化，但是在分析的时候确实不太直观
+不过 prettier 可能会跟 eslint 的规则相互冲突，而且 prettier 也没有语法提示，虽然在保存的时候可以自动格式化，但是在分析的时候确实不太直观
 
 可以安装:`eslint-config-prettier`,`eslint-plugin-prettier`,`prettier`这三个库，`eslint-plugin-prettier`可以将 `prettier` 的规则设置为 `eslint` 的规则，对不符合规则的进行提示，也就是说统一输出错误给 `eslint`;`eslint-config-prettier`可以关闭`eslint`可能与`prettier`发生冲突的代码格式化规则, 也就是说以`prettier`为准；
 
-这样最好采用eslint来格式文件，需要修改setting.json,在保存文件的时候调用eslint去格式化
+这样最好采用 eslint 来格式文件，需要修改 setting.json,在保存文件的时候调用 eslint 去格式化
 
 ```js
 {
@@ -69,7 +69,6 @@ yarn create react-app my-app --template typescript
     ],
 }
 ```
-
 
 ### 配置文件
 
@@ -109,7 +108,7 @@ module.exports = {
 };
 ```
 
-有一点需要注意，eslint只会在初次加载prettier的规则，中间修改了prettier的话，需要重启vscode才行，暂时没找到比较好的办法，除非将prettier的配置放在eslint的rules里面
+有一点需要注意，eslint 只会在初次加载 prettier 的规则，中间修改了 prettier 的话，需要重启 vscode 才行，暂时没找到比较好的办法，除非将 prettier 的配置放在 eslint 的 rules 里面
 
 ```
 "rules": {
@@ -139,7 +138,7 @@ module.exports = {
 
 这个其实官方就给出了方案，用的是`craco`, 当然其实还可以用`react-app-rewired`,不过后者基本上不怎么更新了，当前前者的更新频率也不算很高，后续也可能放弃
 
-不过antd官方给的方案还做不到按需加载，`craco-antd`基本也不怎么兼容最新的版本，所以直接手动安装`babel-plugin-import`就行
+不过 antd 官方给的方案还做不到按需加载，`craco-antd`基本也不怎么兼容最新的版本，所以直接手动安装`babel-plugin-import`就行
 
 ```js
 const CracoLessPlugin = require('craco-less');
@@ -199,11 +198,11 @@ module.exports = {
 };
 ```
 
-中间写了两个CracoLessPlugin，主要是antd需要定制主题，其次就是src内部需要将less以css module的形式调用
+中间写了两个 CracoLessPlugin，主要是 antd 需要定制主题，其次就是 src 内部需要将 less 以 css module 的形式调用
 
-### theme主题文件
+### theme 主题文件
 
-当然我们可以将配置文件以less的形式保存，然后通过less->js传给config.js，这样我们既能定制antd的主题，也能将变量引入自己的less里面去
+当然我们可以将配置文件以 less 的形式保存，然后通过 less->js 传给 config.js，这样我们既能定制 antd 的主题，也能将变量引入自己的 less 里面去
 
 ```js
 const lessToJs = require('less-vars-to-js');

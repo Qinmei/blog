@@ -14,4 +14,4 @@
 
 ### 图片预览
 
-<code  src='../../components/pictures/qinvideo.tsx'  inline/>
+暂无

@@ -58,8 +58,6 @@ fiber 其实是个类型定义, react 将每个组件都抽象成了 fiber 对�
 </Parent>
 ```
 
-<code  src='../../components/pictures/react01.tsx'  inline/>
-
 当遍历 Parent 组件时, 会先遍历 child, 没有 child 则遍历 sibling, 两者都没有则 return 返回上一个节点;
 
 下面是伪代码, 实际上这就是深度优先遍历, 只不过 react 新增几个指针将其设计为可以中断的, 也就是说我们的虚拟 DOM 的比对随时可以中止, 下次还能继续从中断的地方继续比对, 给浏览器渲染留下时间;
